@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<audio id="myAudio" controls>
+  <source src="father and son.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<br>
+
+<button onclick="playAudio()" type="button">Play Audio</button>
+<button onclick="pauseAudio()" type="button">Pause Audio</button>
+
+<br>
+
+<input type="range" id="volume" name="volume" min="0" max="1" step="0.01" onchange="changeVolume()">
+
+<script>
+var audio = document.getElementById("myAudio");
+var volume = document.getElementById("volume");
+
+function playAudio() {
+  audio.play();
+}
+
+function pauseAudio() {
+  audio.pause();
+}
+
+function changeVolume() {
+  audio.volume = volume.value;
+}
+</script>
+
+</body>
+</html>
